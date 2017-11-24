@@ -1,0 +1,30 @@
+/* Seletor */
+		h1 {
+			font-family: arial;
+			color: #ff0000;
+			font-size: 26pt;
+		}
+
+		p {
+			font-size:  12pt;
+			font-family: tahoma;
+			background-color: #c6c6c6;
+
+		}
+		/* Seletor --> Classe */
+		p.maior{
+			font-size: 36pt;
+		}
+
+		/* Genetico */
+		.maiorgenerico{
+			font-size: 48pt;
+			color: green;
+		}
+
+		/* ID */
+		#codigo{
+			background-color: blue;
+			color: yellow;
+			border: 2px solid red; 
+		}
