@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Soma CSS - Bootsrap</title>
+		<link rel="stylesheet" type="text/css" href="../003-Atividades-Bootstrap/bootstrap/css/bootstrap.css">
+		<script>
+
+			function somar(){
+
+				var x = parseInt(document.dados.valor1.value);
+				var y = parseInt(document.dados.valor2.value);
+			
+				if (document.dados.valor1.value.length == 0 || isNaN(x)){
+					//window.alert("Informe o primeiro valor corretamente");
+						
+					document.getElementById("groupV1").classList.add("has-error");
+					document.getElementById("alertaV1").style.display = "block";
+					document.dados.valor1.value = "";
+					document.dados.valor2.focus();
+					return;
+
+				}
+				document.getElementById("groupV1").classList.remove("has-error");
+				document.getElementById("alertaV1").style.display = "none";
+
+				if (document.dados.valor2.value.length == 0 || isNaN(x)) {
+					//window.alert("Informe o segundo valor corretamente");
+
+					document.getElementById("groupV2").classList.add("has-error");
+					document.getElementById("alertaV2").style.display = "block";
+					document.dados.valor2.value = "";
+					document.dados.valor2.focus();
+					return;
+
+				}
+				document.getElementById("groupV2").classList.remove("has-error");
+				document.getElementById("alertaV2").style.display = "none";
+
+
+				var w = x + y;
+
+				window.alert(document.dados.valor1.value.length);
+
+				document.dados.resultado.value = w;
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<form name="dados">
+
+			<div class="container">
+				<div class="jumbotron text-center">
+					<p> Calcular a soma - JS/CSS-Bootstrap</p>
+				</div>
+
+				<div id="groupV1" class="form-group">
+					<label for="valor1">Primeiro Valor</label>
+					<input name="valor1" type="text" class="form-control">
+					<div class="alert alert-danger" style="display: none;" id="alertaV1">
+						Informe o primeiro valor corretamente.
+					</div>
+				</div>
+
+				<div id="groupV2" class="form-group">
+					<label for="valor2">Segundo Valor</label>
+					<input name="valor2" type="text" class="form-control">
+					<div class="alert alert-danger" style="display: none;" id="alertaV2">
+						Informe o segundo valor corretamente.
+					</div>
+				</div>
+				
+				<div id="groupV3" class="form-group">
+					<label for="resultado">Resultado</label>
+					<input name="resultado" type="text" class="form-control">
+				</div>
+
+				<button type="button" class="btn btn-info" onclick="somar()">Somar</button>
+
+			</div>
+	</body>
+</html>

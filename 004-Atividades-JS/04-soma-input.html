@@ -11,6 +11,22 @@
 				var x = parseInt(document.dados.valor1.value);
 				var y = parseInt(document.dados.valor2.value);
 			
+
+
+				if (document.dados.valor1.value.length == 0 || isNaN(x)){
+					window.alert("Informe o primeiro valor corretamente");
+					document.dados.valor1.value = "";
+					document.dados.valor2.document();
+					return;
+				} else if (document.dados.valor2.value.length == 0 || isNaN(x)) {
+					window.alert("Informe o segundo valor corretamente");
+					document.dados.valor2.value = "";
+					document.dados.valor2.document();
+					return;
+				}
+
+
+
 				var w = x + y;
 
 				window.alert(document.dados.valor1.value.length);
